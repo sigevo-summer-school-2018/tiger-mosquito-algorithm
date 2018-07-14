@@ -11,4 +11,5 @@
 
 [Hugo Monzón](https://github.com/hmonzon) is a PhD student at Shinshu University and a member of the international associated lab between Japan & France [LIA MODO](https://sites.google.com/view/lia-modo/)
 
-[Christian Cintrano](http://christiancintrano.com) is a PhD Student at the University of Malaga, Spain. [Linkedin](https://linkedin.com/in/christiancintrano), [ResearchGate](https://www.researchgate.net/profile/Christian_Cintrano), [Google Scholar](scholar.google.es/citations?user=uiC1edgAAAAJ&hl=en) 
+[Christian Cintrano](http://christiancintrano.com) is a PhD Student at the University of Malaga, Spain. [Linkedin](https://linkedin.com/in/christiancintrano), [ResearchGate](https://www.researchgate.net/profile/Christian_Cintrano), [Google Scholar](scholar.google.es/citations?user=uiC1edgAAAAJ&hl=en)
+
