@@ -16,3 +16,5 @@
 [Shota Saito](http://satuma-portfolio.xyz) is a master's course student at Yokohama National University, Japan. [ResearchGate](https://www.researchgate.net/profile/Shota_Saito5), [GitHub](https://github.com/satuma777).
 
 [Hyeon-Chang Lee](https://github.com/iljeodugu) is undergraduate student at Kwangwoon University, Seoul
+
+[Tushar Semwal](http://tusharsemwal.com) is a PhD student at Indian Institute of Technology (IIT) Guwahati. He is currently working in the area of Embodied Evolution.
