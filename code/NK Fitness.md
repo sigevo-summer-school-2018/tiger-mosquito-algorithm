@@ -1,4 +1,4 @@
-# NP problem fitness function structure
+# NK problem fitness function structure
 
 
 This is a function to obtain fitness. This code uses the nextdoor method.
@@ -25,7 +25,7 @@ def fitness(chromosome,n,k):
 
 After import, execute the function with chromosome and n, k as input. The result is fitness.
 ``` python3
-import NP_fitness
+import NK_fitness
 
-fitness_vlaue = NP.fitness.fitness(chromosome, n, k)
+fitness_vlaue = NK_fitness.fitness(chromosome, n, k)
 ```
