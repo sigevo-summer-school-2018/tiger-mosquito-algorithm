@@ -37,14 +37,15 @@ for i in range N:
 return fitnessVal
 ```
 
-### NP problem
+### NK problem
 
-This is a function to obtain fitness. This code uses the nextdoor method.
+The NK problem is that each factor has mutual influence. The next door method was used. The next door method is to evaluate fitness by the values of adjacent parameters. The code is shown below.
 ``` python3
 def fitness(chromosome,n,k):
     :param chromosome : A chromosome of 0 and 1
     :n, k : nk problem parameter
     global NK_landscape
+    :NK_landscape is a matrix that stores fitness values.
     if NK_landscape is None:
         NK_landscape = np.random.rand(n, 2**k)
 
@@ -59,11 +60,4 @@ def fitness(chromosome,n,k):
         fitness_val += NK_landscape[i][temp_list[i]]
 
     return fitness_val
-```
-
-After import, execute the function with chromosome and n, k as input. The result is fitness.
-``` python3
-import NP_fitness
-
-fitness_vlaue = NP.fitness.fitness(chromosome, n, k)
 ```
