@@ -25,6 +25,11 @@ otherwise, the best candidate solution is set as `x* = max_x ( P(x_1), P(x_2), .
 ---
 
 ## Pheromone inheritance mechanism
+Three possible mechanisms:
+1. Fixed pheromone value: Everyone gets a initial value, so new children don't have any advantage depending on their parents performance.
+2. Based on parents value: Could be a function of the parents pheromone, giving and advantage depending on the parents, with the idea that better parents derives in even better children: ` a · parent_1 + (1 - a) · parent_2, 0 <= a <= 1`.
+3. Even better of the current population: `b · pheromone, b > 1 ` and `pheromone` are one of the calculated pheromone by the methods 1 or 2.
+
 
 ## Fitness fucntion
 ### one-max
