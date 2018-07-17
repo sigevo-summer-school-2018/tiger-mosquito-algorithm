@@ -1,0 +1,13 @@
+---
+title: 'Tiger Mosquito Algorithm: Revision of the state of the art'
+author: "Tushar Semwal, J. J. Merelo"
+date: "17 de julio de 2018"
+output: html_document
+bibliography: ../assets/survey.bib
+---
+
+# Introduction
+
+This is an introduction to the theoretical underpinnings and practical matters related to the tiger mosquito algorithm, an algorithm which is inspired by how tiger mosquitos and other plagues [@ong2015investigation,@ong,@dawson1989note].
+
+## References
