@@ -1,3 +1,4 @@
+#       © Shota Saito, 2018
 #
 #	This file is part of the Tiger Mosquito Algorithm - TMA
 #	It implements the selection scheme
@@ -14,8 +15,8 @@
 #
 #	You should have received a copy of the GNU General Public License
 #	along with this program.  If not, see <https://www.gnu.org/licenses/>.
-#
-#	Author: Shota Saito
+
+
 
 
 from operator import attrgetter
