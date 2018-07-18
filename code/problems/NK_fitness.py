@@ -1,3 +1,4 @@
+#	© Hyeon-Chang Lee, Hugo Monzon, 2018
 #
 #	This file is part of the Tiger Mosquito Algorithm - TMA
 #	It implements the NK-Landscape problem
@@ -15,7 +16,7 @@
 #	You should have received a copy of the GNU General Public License
 #	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
-#	Authors: Hyeon-Chang Lee, Hugo Monzon
+
 
 def fitness(chromosome,n,k,epistasis):
     """
