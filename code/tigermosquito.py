@@ -1,3 +1,4 @@
+#       © Hugo Monzon, 2018
 #
 #	This file is part of the Tiger Mosquito Algorithm - TMA
 #	The implementation is based on the onemax.py example provided in
@@ -17,7 +18,6 @@
 #	You should have received a copy of the GNU General Public License
 #	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
-#	Author: Hugo Monzon
 
 from problems.NK_fitness import fitness
 
@@ -35,6 +35,12 @@ from deap import tools
 def config(n,k):
 	
 	"""
+	Receives parameters for the problem, and for the genetic operators
+	:param n: Defines the size of the bit string for the NK-landscape problem
+	:param k: Defines the epistasis bit for the NK-landscape problem
+	:returns: A toolbox object (from deap framework) that
+			 has information on how to create individuals, which
+			 evaluation, selection, crossover and mutation function to use
 	"""
 	
 	#Setup Fitness type and problem to be evaluated
