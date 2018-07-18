@@ -5,15 +5,19 @@ This is an algorithm inspired by the mechanisms used to mitigate the tiger mosqu
 ## General description
 
 ## Pheromone update mechanism
+
 We will use two different update of the pheromone potential (`PP`) of each individual.
+
 * Based on the whole inheritance:
+
 ```python
 if x_i selected:
   PP(x_i) += constant_value
   PP(parents[x_i]) += Q^h*PP(x_i)
 ```
 
-* Based on their childrens
+* Based on their children
+
 ```python
 if x_i selected:
   PP(x_i) += constant_value + k * size(childrens)
@@ -21,14 +25,15 @@ if x_i selected:
 
 
 ## Tournament resolution mechanism
+
 We propose the new selection scheme that the individual is given the score stochastically.
 The property of our proposed selection scheme is written as below.
 
 ---
 
-Input: The tournament size N_tournament, the set of candidate solutions `X = {x_1, x_2, ... , x_N}`, the objective function `f: X -> R`, the pheromone of candidate solutions `P = {p(x_1), p(x_2), ..., p(x_N)}` and the selection rate function `sr(t)` dependent on the iteration `t` such that `sr(0) = 1.0`.
+* Input: The tournament size N_tournament, the set of candidate solutions `X = {x_1, x_2, ... , x_N}`, the objective function `f: X -> R`, the pheromone of candidate solutions `P = {p(x_1), p(x_2), ..., p(x_N)}` and the selection rate function `sr(t)` dependent on the iteration `t` such that `sr(0) = 1.0`.
 
-Output: the selected solutions `x*`
+* Output: the selected solutions `x*`
 
 1.	The random value `r` is sampled from the uniform distribution.
 2.	Select the `N_tournament` solutions in `X` at random.
