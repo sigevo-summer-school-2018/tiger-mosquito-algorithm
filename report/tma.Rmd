@@ -10,4 +10,6 @@ bibliography: ../assets/survey.bib
 
 This is an introduction to the theoretical underpinnings and practical matters related to the tiger mosquito algorithm, an algorithm which is inspired by how tiger mosquitos and other plagues [@ong2015investigation,@ong,@dawson1989note].
 
+Though there are work which are based on the host-seeking behaviour of mosquitoes [@wang2017,feng2016], none of them have exploited the concepts of oviposition pheromone by augmenting it with the fitness of the solutions. By characterizing the solutions not only with their fitness values but also with the pheromone strength, we want to create a diverse set of quality solutions. Wang et al. [@wang2017] have proposed the Group Mosquito Host-Seeking algorithm to eficiently solve the TSP problem but they have not worked towards more generic algorithm which can used for creating a repertiore of diverse and quality solutions. As the part of SigEvo Summer School, this mini-project wants to touch on the use of Tigr-Mosquito ovitrap system to build a evolutionary computational model.
+
 ## References
