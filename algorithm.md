@@ -6,21 +6,21 @@ This is an algorithm inspired by the mechanisms used to mitigate the tiger mosqu
 
 ## Pheromone update mechanism
 
-We will use two different update of the pheromone potential (`PP`) of each individual.
+We will use two different update of the pheromone value (`P`) of each individual.
 
 * Based on the whole inheritance:
 
 ```python
 if x_i selected:
-  PP(x_i) += constant_value
-  PP(parents[x_i]) += Q^h*PP(x_i)
+  P(x_i) += constant_value
+  P(parents[x_i]) += Q^h*P(x_i)
 ```
 
 * Based on their children
 
 ```python
 if x_i selected:
-  PP(x_i) += constant_value + k * size(childrens)
+  P(x_i) += constant_value + k * size(childrens)
 ```
 
 
