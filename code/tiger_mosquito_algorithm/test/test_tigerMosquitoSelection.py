@@ -63,13 +63,13 @@ class TestTigerMosquitoSelection(unittest.TestCase):
         offspring = algorithms.varAnd(population, toolbox, cxpb=0., mutpb=0.)
         max_sample = offspring[np.argmax(np.sum(offspring, axis=1))]
         # set pheromone each individual
-        pheromones = [[50], [100], [75]]
+        pheromones = [50, 100, 75]
         # evaluation
         fits = toolbox.map(toolbox.evaluate, offspring)
         for i, fit_ind in enumerate(zip(fits, offspring)):
             fit, ind = fit_ind
             ind.fitness.values = fit
-            ind.pheromone.values = pheromones[i]
+            ind.pheromone.values = (pheromones[i], )
 
         selected_ind = toolbox.select(offspring, k=1)
         self.assertEqual([max_sample], selected_ind)
@@ -82,14 +82,14 @@ class TestTigerMosquitoSelection(unittest.TestCase):
         # population size = 3
         offspring = algorithms.varAnd(population, toolbox, cxpb=0., mutpb=0.)
         # set pheromone each individual
-        pheromones = [[50], [100], [75]]
+        pheromones = [50, 100, 75]
         max_sample = offspring[np.argmax(pheromones)]
         # evaluation
         fits = toolbox.map(toolbox.evaluate, offspring)
         for i, fit_ind in enumerate(zip(fits, offspring)):
             fit, ind = fit_ind
             ind.fitness.values = fit
-            ind.pheromone.values = pheromones[i]
+            ind.pheromone.values = (pheromones[i],)
 
         selected_ind = toolbox.select(offspring, k=1)
         self.assertEqual([max_sample], selected_ind)
