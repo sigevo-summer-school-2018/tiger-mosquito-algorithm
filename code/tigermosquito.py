@@ -1,5 +1,4 @@
 #       © Hugo Monzon, 2018
-#
 #	This file is part of the Tiger Mosquito Algorithm - TMA
 #	The implementation is based on the onemax.py example provided in
 #	the DEAP - Distributed Evolutionary Algorithms in Python.
@@ -17,7 +16,6 @@
 #
 #	You should have received a copy of the GNU General Public License
 #	along with this program.  If not, see <https://www.gnu.org/licenses/>.
-#
 
 from problems.NK_fitness import fitness
 
