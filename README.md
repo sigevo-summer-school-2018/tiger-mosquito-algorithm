@@ -2,6 +2,8 @@
 
 This is the project of one of the teams in the [SIGEvo summer school 2018](https://sigevo-summer-school-2018.github.io).
 
+This site can be accessed also through the short url https://git.io/wasabitigers
+
 ## Description of the algorithm
 
 A new evolutionary algorithm inspired from the tiger mosquito plague fighting techniques. The only things that change is the selection mechanism, which uses a *pheromone* to represent the direction in which search should go.
