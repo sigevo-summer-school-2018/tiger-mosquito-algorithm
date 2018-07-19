@@ -28,7 +28,7 @@ def evalOneMax(individual):
     return sum(individual),
 
 
-def getPheromon(individual):
+def getPheromone(individual):
     # this code is fake
     return 0,
 
@@ -52,7 +52,7 @@ class TestTigerMosquitoSelection(unittest.TestCase):
         self.toolbox.register("evaluate", evalOneMax)
         self.toolbox.register("mate", tools.cxTwoPoint)
         self.toolbox.register("mutate", tools.mutFlipBit, indpb=0.05)
-        self.toolbox.register("pheromone", getPheromon)
+        self.toolbox.register("pheromone", getPheromone)
 
     def test_fitness_mode(self):
         toolbox = self.toolbox
