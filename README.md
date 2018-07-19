@@ -41,3 +41,7 @@ A more extended description will be shown in [this page](algorithm.md)
 ## The team
 
 [5 students from all over the world, and a tutor](team.md).
+
+## Other teams
+
+The [*tigers* team](https://sigevo-summer-school-2018.github.io/tigers/) tries to model the spread of mosquitos.
