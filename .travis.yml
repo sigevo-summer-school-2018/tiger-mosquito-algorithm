@@ -3,5 +3,4 @@ python:
     - "3.6"
 install: cd code; pip install -r requirements.txt
 
-script:
-    - cd tiger_mosquito_algorithm; ./test.py
+script: cd tiger_mosquito_algorithm; ./test.py
