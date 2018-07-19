@@ -1,8 +1,10 @@
+#!/usr/bin/env python
+
 #       © Shota Saito, 2018
 #
 #	This file is part of the Tiger Mosquito Algorithm - TMA
 #	It implements the selection scheme
-#
+# 
 #	TMA is free software: you can redistribute it and/or modify
 #	it under the terms of the GNU General Public License as published by
 #	the Free Software Foundation, either version 3 of the License, or
