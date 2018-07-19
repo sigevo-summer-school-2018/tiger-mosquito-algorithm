@@ -24,9 +24,9 @@ import numpy as np
 
 from selection import tigerMosquitoSelection
 
-fixed_binary = [0,1,1,  # individual 1
-                1,0,0,  # individual 2
-                0,1,0]  # individual 3
+fixed_binary = [1,0,0,  # individual 1
+                1,1,0,  # individual 2
+                1,1,1]  # individual 3
 
 idx = 0
 
@@ -40,7 +40,11 @@ def getPheromon(individual):
 
 
 def fixBinaryGenerated():
-    return
+    global binary
+    global idx
+    binary = fixed_binary[idx]
+    idx = idx + 1 if idx + 1 <= len(fixed_binary) - 1 else 0
+    return binary
 
 class TestTigerMosquitoSelection(unittest.TestCase):
     def setUp(self):
@@ -54,7 +58,7 @@ class TestTigerMosquitoSelection(unittest.TestCase):
                            pheromone=creator.PheromoneMax)
         self.toolbox = base.Toolbox()
 
-        self.toolbox.register("attr_bool", random.randint, 0, 1)
+        self.toolbox.register("attr_bool", fixBinaryGenerated)
 
         self.toolbox.register("individual", tools.initRepeat,
                               creator.Individual, self.toolbox.attr_bool, n=3)
@@ -72,18 +76,19 @@ class TestTigerMosquitoSelection(unittest.TestCase):
         population = toolbox.population(n=3)
         # population size = 3
         offspring = algorithms.varAnd(population, toolbox, cxpb=0., mutpb=0.)
-        max_sample = offspring[np.argmax(np.sum(offspring, axis=1))]
         # set pheromone each individual
         pheromones = [50, 100, 75]
         # evaluation
         fits = toolbox.map(toolbox.evaluate, offspring)
+
         for i, fit_ind in enumerate(zip(fits, offspring)):
             fit, ind = fit_ind
             ind.fitness.values = fit
             ind.pheromone.values = (pheromones[i], )
 
+        random.seed(20180719)
         selected_ind = toolbox.select(offspring, k=1)
-        self.assertEqual([max_sample], selected_ind)
+        self.assertEqual([[1,1,1]], selected_ind)
 
     def test_pheromone_mode(self):
         toolbox = self.toolbox
@@ -94,16 +99,22 @@ class TestTigerMosquitoSelection(unittest.TestCase):
         offspring = algorithms.varAnd(population, toolbox, cxpb=0., mutpb=0.)
         # set pheromone each individual
         pheromones = [50, 100, 75]
-        max_sample = offspring[np.argmax(pheromones)]
+
         # evaluation
         fits = toolbox.map(toolbox.evaluate, offspring)
+
+        max_p = -1
         for i, fit_ind in enumerate(zip(fits, offspring)):
             fit, ind = fit_ind
             ind.fitness.values = fit
             ind.pheromone.values = (pheromones[i],)
+            if max_p <= pheromones[i]:
+                max_p = pheromones[i]
+                max_sample = ind
 
+        random.seed(20180719)
         selected_ind = toolbox.select(offspring, k=1)
-        self.assertEqual([max_sample], selected_ind)
+        self.assertEqual([[1,1,0]], selected_ind)
 
 if __name__ == '__main__':
     unittest.main()
