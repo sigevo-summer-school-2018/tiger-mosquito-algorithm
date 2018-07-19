@@ -24,14 +24,23 @@ import numpy as np
 
 from selection import tigerMosquitoSelection
 
+fixed_binary = [0,1,1,  # individual 1
+                1,0,0,  # individual 2
+                0,1,0]  # individual 3
+
+idx = 0
+
 def evalOneMax(individual):
     return sum(individual),
 
 
-def getPheromone(individual):
+def getPheromon(individual):
     # this code is fake
     return 0,
 
+
+def fixBinaryGenerated():
+    return
 
 class TestTigerMosquitoSelection(unittest.TestCase):
     def setUp(self):
@@ -44,15 +53,17 @@ class TestTigerMosquitoSelection(unittest.TestCase):
                            fitness=creator.FitnessMax,
                            pheromone=creator.PheromoneMax)
         self.toolbox = base.Toolbox()
+
         self.toolbox.register("attr_bool", random.randint, 0, 1)
+
         self.toolbox.register("individual", tools.initRepeat,
-                              creator.Individual, self.toolbox.attr_bool, n=50)
+                              creator.Individual, self.toolbox.attr_bool, n=3)
         self.toolbox.register("population", tools.initRepeat, list,
                               self.toolbox.individual)
         self.toolbox.register("evaluate", evalOneMax)
         self.toolbox.register("mate", tools.cxTwoPoint)
         self.toolbox.register("mutate", tools.mutFlipBit, indpb=0.05)
-        self.toolbox.register("pheromone", getPheromone)
+        self.toolbox.register("pheromone", getPheromon)
 
     def test_fitness_mode(self):
         toolbox = self.toolbox
